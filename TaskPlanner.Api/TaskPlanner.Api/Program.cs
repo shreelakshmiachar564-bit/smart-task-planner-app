@@ -11,7 +11,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp", policy =>
     {
-        policy.WithOrigins("https://smart-task-planner-1-9m17.onrender.com/")
+        policy.WithOrigins("https://smart-task-planner-1-9m17.onrender.com")
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
