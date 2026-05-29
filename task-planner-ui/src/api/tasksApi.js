@@ -1,12 +1,14 @@
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 export async function getTasks() {
+   console.log("URL: ", API_BASE_URL);
   const response = await fetch(`${API_BASE_URL}/api/tasks`);
   if (!response.ok) throw new Error("Failed to fetch tasks");
   return await response.json();
 }
 
 export async function createTask(task) {
+ 
   const response = await fetch(`${API_BASE_URL}/api/tasks`, {
     method: "POST",
     headers: {
